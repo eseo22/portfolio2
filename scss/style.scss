@@ -1,0 +1,28 @@
+@charset "utf-8";
+@import "reset";
+
+main{
+    width: 100%; 
+    section{
+        width: 100%;
+        .item-sizer{
+            width: 25%;
+            height: 0px;
+            opacity: 0;
+        }
+
+        &::after{content: ''; display: block; clear: both;}
+        .item{
+            width: 25%;
+            height: 33.333vh;
+            padding: 15px;
+            float: left;
+            border: 1px solid #eee;
+            
+
+            &:nth-of-type(6){width: 50%;}
+            &:nth-of-type(8){width: 50%;}
+
+        }
+    }
+}
