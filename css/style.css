@@ -11,25 +11,79 @@ a {
 
 main {
   width: 100%; }
+  main header {
+    width: 100%;
+    border-bottom: 1px solid pink; }
+    main header > .inner {
+      width: 1180px;
+      margin: 0 auto; }
+      main header > .inner::after {
+        content: '';
+        display: block;
+        clear: both; }
+      main header > .inner > div {
+        float: left; }
+      main header > .inner .left {
+        width: 25%;
+        border-right: 1px solid pink; }
+        main header > .inner .left h1 {
+          height: 10vh;
+          line-height: 70px; }
+      main header > .inner .center {
+        width: 63%;
+        border-right: 1px solid pink;
+        padding-right: 20px; }
+        main header > .inner .center .list {
+          display: flex;
+          justify-content: flex-end; }
+          main header > .inner .center .list li {
+            width: 100px;
+            height: 10vh;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+            main header > .inner .center .list li:nth-of-type(2)::before, main header > .inner .center .list li:nth-of-type(3)::before {
+              content: '';
+              display: block;
+              width: 1px;
+              height: 40px;
+              transform: rotate(25deg);
+              background: #eee;
+              position: relative;
+              left: -27px; }
+            main header > .inner .center .list li:nth-of-type(2) {
+              width: 120px; }
+            main header > .inner .center .list li:nth-of-type(3)::before {
+              left: -20px; }
+      main header > .inner .right {
+        width: 12%; }
   main section {
     width: 100%; }
-    main section .item-sizer {
-      width: 25%;
-      height: 0px;
-      opacity: 0; }
-    main section::after {
-      content: '';
-      display: block;
-      clear: both; }
-    main section .item {
-      width: 25%;
-      height: 33.333vh;
-      padding: 15px;
-      float: left;
-      border: 1px solid #eee; }
-      main section .item:nth-of-type(6) {
-        width: 50%; }
-      main section .item:nth-of-type(8) {
-        width: 50%; }
+    main section > .inner {
+      width: 1180px;
+      margin: 0 auto; }
+      main section > .inner .item-sizer {
+        width: 25%;
+        height: 0px;
+        opacity: 0; }
+      main section > .inner::after {
+        content: '';
+        display: block;
+        clear: both; }
+      main section > .inner .item {
+        width: 25%;
+        height: calc(90vh / 3);
+        padding: 15px;
+        float: left;
+        border: 1px solid pink; }
+        main section > .inner .item:nth-of-type(6) {
+          width: 50%; }
+        main section > .inner .item:nth-of-type(8) {
+          width: 50%; }
+        main section > .inner .item:nth-of-type(17) {
+          width: 50%; }
+        main section > .inner .item:nth-of-type(19) {
+          width: 50%; }
 
 /*# sourceMappingURL=style.css.map */

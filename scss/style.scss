@@ -3,26 +3,94 @@
 
 main{
     width: 100%; 
+
+    header{
+        width: 100%; 
+        border-bottom: 1px solid pink;
+
+        >.inner{
+            width: 1180px; margin: 0 auto;
+            &::after{content: ''; display: block; clear: both;}
+
+            >div{
+                float: left;
+                //height: 10vh; border: 2px solid #000;
+            }
+            .left{
+                width: 25%;
+                border-right: 1px solid pink;
+                h1{
+                    height: 10vh;
+                    line-height: 70px;
+                }
+            }
+            .center{
+                width: 63%; 
+                border-right: 1px solid pink;
+                padding-right: 20px;
+                
+                .list{
+                    display: flex;
+                    justify-content: flex-end;
+                    li{
+                        width: 100px; height: 10vh;
+                        font-size: 20px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                        &:nth-of-type(2),&:nth-of-type(3){
+                            &::before{
+                                content: ''; display: block;
+                                width:1px ; height: 40px;
+                                transform: rotate(25deg);
+                                background: #eee;
+                                position: relative;
+                                left: -27px;
+                            }
+                            
+                        }
+                        &:nth-of-type(2){width: 120px;}
+                        &:nth-of-type(3){&::before{left:-20px;}}
+    
+                    }
+                }
+    
+            }
+            .right{
+                width: 12%; 
+            }
+        }
+        
+    }
     section{
         width: 100%;
-        .item-sizer{
-            width: 25%;
-            height: 0px;
-            opacity: 0;
+        >.inner{
+            width: 1180px; margin: 0 auto;
+
+            .item-sizer{
+                width: 25%;
+                height: 0px;
+                opacity: 0;
+            }
+    
+            &::after{content: ''; display: block; clear: both;}
+            .item{
+                width: 25%;
+                height: calc(90vh / 3);
+                padding: 15px;
+                float: left;
+                border: 1px solid pink;
+                
+                
+                &:nth-of-type(6){width: 50%;}
+                &:nth-of-type(8){width: 50%;}
+                &:nth-of-type(17){width: 50%;}
+                &:nth-of-type(19){width: 50%;}
+
+    
+            }
         }
-
-        &::after{content: ''; display: block; clear: both;}
-        .item{
-            width: 25%;
-            height: 33.333vh;
-            padding: 15px;
-            float: left;
-            border: 1px solid #eee;
-            
-
-            &:nth-of-type(6){width: 50%;}
-            &:nth-of-type(8){width: 50%;}
-
-        }
+        
     }
 }
