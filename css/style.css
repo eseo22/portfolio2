@@ -11,6 +11,41 @@ a {
 
 main {
   width: 100%; }
+  main header {
+    width: 100%; }
+    main header .inner {
+      width: 1180px;
+      margin: 0 auto;
+      display: flex; }
+      main header .inner div {
+        border: 1px solid #ddd;
+        width: 25%;
+        height: 70px;
+        padding: 0px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; }
+      main header .inner .first {
+        justify-content: center; }
+        main header .inner .first h1 {
+          font-size: 18px; }
+      main header .inner .second {
+        width: 50%; }
+        main header .inner .second ul::after {
+          content: '';
+          display: block;
+          clear: both; }
+        main header .inner .second ul li {
+          margin-left: 40px;
+          float: left; }
+          main header .inner .second ul li a {
+            font-size: 18px;
+            color: #bbb; }
+      main header .inner .third {
+        text-align: right; }
+        main header .inner .third i {
+          font-size: 25px;
+          color: #ddd; }
   main section {
     width: 100%; }
     main section > .inner {
@@ -109,14 +144,21 @@ main {
             main section > .inner .item:nth-of-type(10) .inner:hover img {
               filter: grayscale(0); }
         main section > .inner .item:nth-of-type(11) .inner {
-          position: relative; }
-          main section > .inner .item:nth-of-type(11) .inner p {
-            font-size: 15px;
-            color: #222;
-            transform: rotate(-90deg);
-            position: absolute;
-            top: 30px;
-            right: 0; }
+          position: relative;
+          display: flex;
+          justify-content: flex-end; }
+          main section > .inner .item:nth-of-type(11) .inner .txt {
+            position: relative;
+            top: 20px;
+            right: -10px;
+            height: 50px;
+            transform: rotate(-90deg); }
+            main section > .inner .item:nth-of-type(11) .inner .txt span {
+              font-size: 14px;
+              color: #222; }
+            main section > .inner .item:nth-of-type(11) .inner .txt p {
+              font-size: 15px;
+              color: #222; }
         main section > .inner .item:nth-of-type(12) .inner {
           position: relative;
           overflow: hidden; }
@@ -161,6 +203,18 @@ main {
           main section > .inner .item:nth-of-type(12) .inner:hover .box {
             opacity: 1;
             margin-left: 0; }
+        main section > .inner .item:nth-of-type(13) .inner {
+          display: flex;
+          flex-wrap: wrap;
+          align-content: flex-end; }
+          main section > .inner .item:nth-of-type(13) .inner h2 {
+            width: 100%;
+            font-size: 20px;
+            color: #222; }
+          main section > .inner .item:nth-of-type(13) .inner p {
+            width: 100%;
+            font-size: 15px;
+            color: #888; }
         main section > .inner .item:nth-of-type(15) {
           width: 50%; }
           main section > .inner .item:nth-of-type(15) .inner img {
@@ -181,14 +235,12 @@ main {
             position: absolute;
             top: 0;
             left: 0;
-            background-color: rgba(0, 0, 0, 0.6);
-            opacity: 0;
-            transform: translateY(-100%);
-            transition: 1s; }
+            background-color: rgba(0, 0, 0, 0.4);
+            opacity: 1; }
             main section > .inner .item:nth-of-type(16) .inner .box .txt {
               width: 100%;
               height: 100%;
-              padding: 30px 20px;
+              padding: 30px;
               border: 1px solid #fff;
               display: flex;
               flex-wrap: wrap;
@@ -201,10 +253,11 @@ main {
               main section > .inner .item:nth-of-type(16) .inner .box .txt i {
                 display: block;
                 font-size: 50px;
-                color: #fff; }
-          main section > .inner .item:nth-of-type(16) .inner:hover .box {
-            opacity: 1;
-            transform: translateY(0); }
+                color: #fff;
+                transform: translateX(-20px);
+                transition: 0.5s; }
+          main section > .inner .item:nth-of-type(16) .inner:hover .box .txt i {
+            transform: translateX(0px); }
         main section > .inner .item:nth-of-type(17) .inner {
           background: url(../img/small.jpg);
           padding: 30px; }
@@ -218,5 +271,104 @@ main {
             main section > .inner .item:nth-of-type(17) .inner .box h2 {
               font-size: 20px;
               color: #444; }
+
+@media screen and (max-width: 1179px) {
+  main header .inner {
+    width: 100%; }
+  main section > .inner {
+    width: 100%; }
+    main section > .inner .item {
+      width: 25%; }
+      main section > .inner .item:nth-of-type(4) {
+        width: 50%; }
+      main section > .inner .item:nth-of-type(6) .inner h2 {
+        font-size: 30px;
+        letter-spacing: 1.4px; }
+        main section > .inner .item:nth-of-type(6) .inner h2 span {
+          font-style: italic;
+          font-size: 26px; }
+      main section > .inner .item:nth-of-type(8) {
+        width: 50%; }
+      main section > .inner .item:nth-of-type(16) {
+        width: 50%; }
+      main section > .inner .item:nth-of-type(17) {
+        width: 50%; } }
+@media screen and (max-width: 539px) {
+  main header .inner div {
+    border: 1px solid #ddd;
+    width: 25%;
+    height: 50px;
+    padding: 0px; }
+  main header .inner .first {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    main header .inner .first h1 {
+      font-size: 18px; }
+  main header .inner .second {
+    width: 60%;
+    padding-right: 20px; }
+    main header .inner .second ul li {
+      margin-left: 20px; }
+      main header .inner .second ul li a {
+        font-size: 15px;
+        color: #bbb; }
+  main header .inner .third {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    main header .inner .third i {
+      font-size: 20px;
+      color: #ddd; }
+  main section .inner .item:nth-of-type(1) {
+    width: 50%;
+    height: 125px; }
+  main section .inner .item:nth-of-type(2) {
+    width: 50%;
+    height: 125px; }
+  main section .inner .item:nth-of-type(3) {
+    width: 25%;
+    height: 250px; }
+  main section .inner .item:nth-of-type(4) {
+    width: 75%; }
+  main section .inner .item:nth-of-type(5) {
+    width: 50%; }
+  main section .inner .item:nth-of-type(6) {
+    width: 50%; }
+    main section .inner .item:nth-of-type(6) .inner h2 {
+      font-size: 25px; }
+  main section .inner .item:nth-of-type(7) {
+    width: 25%;
+    height: 125px; }
+  main section .inner .item:nth-of-type(8) {
+    width: 75%; }
+  main section .inner .item:nth-of-type(9) {
+    width: 25%;
+    height: 125px;
+    background-color: #f5f5f5; }
+  main section .inner .item:nth-of-type(10) {
+    width: 75%; }
+  main section .inner .item:nth-of-type(11) {
+    width: 25%; }
+    main section .inner .item:nth-of-type(11) .inner p {
+      width: 80px; }
+  main section .inner .item:nth-of-type(12) {
+    width: 100%; }
+  main section .inner .item:nth-of-type(13) {
+    width: 25%; }
+    main section .inner .item:nth-of-type(13) .inner h2 {
+      font-size: 16px;
+      margin-bottom: 10px; }
+    main section .inner .item:nth-of-type(13) .inner p {
+      font-size: 14px; }
+  main section .inner .item:nth-of-type(14) {
+    width: 25%; }
+  main section .inner .item:nth-of-type(15) {
+    width: 50%; }
+  main section .inner .item:nth-of-type(16) .inner .box, main section .inner .item:nth-of-type(17) .inner .box {
+    padding: 30px 18px; }
+    main section .inner .item:nth-of-type(16) .inner .box h2, main section .inner .item:nth-of-type(17) .inner .box h2 {
+      font-size: 15px; } }
 
 /*# sourceMappingURL=style.css.map */
