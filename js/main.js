@@ -1,3 +1,15 @@
+var vid = document.querySelector("video");
+
+$("video").on("mouseenter", function(){
+    vid.play();
+});
+
+$("video").on("mouseleave", function(){
+    vid.pause();
+});
+
+
+
 $("body").on("mousemove", ".item div.on", function(e){
     var cx = $(this).offset().left;
     var cy = $(this).offset().top;
@@ -16,3 +28,5 @@ $(".item div.on").on("mouseenter", function(){
 $(".item div.on").on("mouseleave", function(){
     $(this).find(".circle").css({opacity:0})
 })
+
+
