@@ -44,10 +44,26 @@ $(".frame").on("click", function (e) {
             )
         )
     )
-
 });
+$(".vid").on("click", function(e){
+    e.preventDefault();
+    let target2 = $(this).find("video").attr("src");
+    $(".pop2").remove();
+    $("body").append(
+        $("<aside class = 'pop2'>").append(
+            $("<div class = 'inner'>").append(
+                $("<video muted autoplay loop>").attr({src: target2}),
+                $("<p>").text("Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, cumque eum voluptatem temporibus explicabo quibusdam deleniti quidem fuga quae provident harum aperiam consectetur magnam blanditiis totam dolore? Quo, nobis impedit."),
+                $("<span class='btnClose'>").text("close")
+            )
+        )
+    )
+})
+
 
 //레이어 닫기버튼 클릭시 제거
-$("body").on("click", ".pop .btnClose", function () {
+$("body").on("click", ".btnClose", function () {
     $(".pop").remove();
+    $(".pop2").remove();
+
 });
