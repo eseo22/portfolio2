@@ -8,8 +8,6 @@ $("video").on("mouseleave", function(){
     vid.pause();
 });
 
-
-
 $("body").on("mousemove", ".item div.on", function(e){
     var cx = $(this).offset().left;
     var cy = $(this).offset().top;
@@ -30,3 +28,26 @@ $(".item div.on").on("mouseleave", function(){
 })
 
 
+//팝업
+$(".frame").on("click", function (e) {
+    e.preventDefault();
+    let target = $(this).find("img").attr("src");
+    console.log(target);
+    $(".pop").remove();
+    
+    $("body").append(
+        $("<aside class = 'pop'>").append(
+            $("<div class = 'inner'>").append(
+                $("<img>").attr({src: target}),
+                $("<p>").text("Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, cumque eum voluptatem temporibus explicabo quibusdam deleniti quidem fuga quae provident harum aperiam consectetur magnam blanditiis totam dolore? Quo, nobis impedit."),
+                $("<span class='btnClose'>").text("close")
+            )
+        )
+    )
+
+});
+
+//레이어 닫기버튼 클릭시 제거
+$("body").on("click", ".pop .btnClose", function () {
+    $(".pop").remove();
+});

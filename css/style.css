@@ -272,6 +272,40 @@ main {
               font-size: 20px;
               color: #444; }
 
+.pop {
+  position: fixed;
+  width: 800px;
+  height: 500px;
+  background: rgba(0, 0, 0, 0.8);
+  box-sizing: border-box;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  .pop .inner {
+    width: 100%;
+    padding: 40px;
+    position: relative;
+    display: flex; }
+    .pop .inner img {
+      width: 60%;
+      height: 420px;
+      object-fit: cover; }
+    .pop .inner p {
+      width: 34%;
+      height: auto;
+      font-size: 15px;
+      color: #fff;
+      position: absolute;
+      bottom: 40px;
+      right: 40px; }
+    .pop .inner .btnClose {
+      position: absolute;
+      top: 40px;
+      right: 40px;
+      font: bold 20px/1 "arial";
+      color: #fff;
+      cursor: pointer; }
+
 @media screen and (max-width: 1179px) {
   main header .inner {
     width: 100%; }

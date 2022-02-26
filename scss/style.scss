@@ -375,6 +375,35 @@ main{
     }
 }
 
+.pop {
+    position: fixed; width: 800px; height: 500px;
+    background: rgba(0,0,0,0.8); 
+    box-sizing: border-box; top: 50%; left: 50%;
+    transform: translate(-50%, -50%); 
+
+    .inner{
+        width: 100%; padding: 40px;
+        position: relative;
+        display: flex;
+        img{
+            width: 60%; height: 420px; object-fit: cover;
+        }
+        p{
+            width: 34%; height: auto;
+            font-size: 15px; color: #fff;
+            position: absolute; bottom: 40px; right: 40px;
+        }
+        .btnClose {
+            position: absolute; top: 40px; right: 40px;
+            font: bold 20px/1 "arial"; color: #fff;
+            cursor: pointer; 
+        }
+    }
+
+
+    
+}
+
 @media screen and (max-width:1179px) {
 
     main{
